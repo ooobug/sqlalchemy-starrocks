@@ -1,0 +1,2 @@
+drop database if exists test;create database if not exists test;
+drop table if exists test.test_date;create table if not exists test.test_date( `year` int not null, `month` int not null, `day` int not null, `tag` string) distributed by hash(year, month, day) properties("replication_num"="1");
